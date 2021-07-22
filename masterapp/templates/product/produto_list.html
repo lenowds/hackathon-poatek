@@ -1,0 +1,102 @@
+{% extends 'master.html' %}
+
+{% load static %}
+{% load product_tags %}
+
+{% block title %}
+{% if category %}
+{{ category.des_categoria }}
+{% else %}
+Produtos
+{% endif %}
+{% endblock title %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            {% include "mainmenu.html" with page=page_obj %}
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <div class="hero__search__form">
+                        <form action="#">
+                            <div class="hero__search__categories">
+                                Todas categorias
+                                <span class="arrow_carrot-down"></span>
+                                <span class="arrow_carrot-down"></span>
+                            </div>
+                            <input type="text" placeholder="O que voc&ecirc; procura?">
+                            <button type="submit" class="site-btn">BUSCAR</button>
+                        </form>
+                    </div>
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>0800 888 8888</h5>
+                            <span>Servi&ccedil;o de atendimento ao cliente</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row featured__filter">
+
+                    {% for product in produto_list %}
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                        <div class="featured__item">
+
+                            {% if product.imagem %}
+                            <div class="featured__item__pic set-bg" data-setbg="/midia/{{product.imagem}}">
+                            {% else %}
+                            <div class="featured__item__pic set-bg" data-setbg="{% static 'images/no_image.jpg' %}">
+                            {% endif %}
+                                <ul class="featured__item__pic__hover">
+                                    <li>
+                                        <a href="#"><i class="fa fa-heart"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-retweet"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="featured__item__text">
+                                <h6><a href="{{ product.get_absolute_url }}">{{ product.des_produto }}</a></h6>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:"4" and not forloop.last %}
+                </div>
+                <div class="row featured__filter">
+                    {% endif %}
+                    {% endfor %}
+                    
+                    {% if produto_list|length|remainder == 3 %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    {% elif produto_list|length|remainder == 2 %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    {% elif produto_list|length|remainder == 1 %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat"></div>
+                    {% endif %}
+
+                </div>
+                
+                {% if is_paginated %}
+                {% include "pagination.html" with page=page_obj %}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

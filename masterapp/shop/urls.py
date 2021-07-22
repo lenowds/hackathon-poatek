@@ -1,9 +1,9 @@
 from django.urls import path
-from django.urls.resolvers import URLPattern
-from . import views
+from .views import HomePageView, ContactPageView
 
 app_name = "shop"
 
 urlpatterns = [
-    path("", views.HomePageView.as_view(), name='home'),
+    path("", HomePageView.as_view(), name='home'),
+    path("contact/", ContactPageView.as_view(), name='contact'),
 ]

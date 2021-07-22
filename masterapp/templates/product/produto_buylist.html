@@ -1,0 +1,216 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+    Lista de Compras
+{% endblock title %}
+
+{% block content %}
+<section class="breadcrumb-section set-bg" data-setbg="/midia/img/buylist-1.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Lista de Compras</h2>
+                    <div class="breadcrumb__option">
+                        <span>Sua compra sem sair de casa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="from-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title from-blog__title">
+                    <h2>Melhores Pre&ccedil;os</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="/midia/img/condor-supermercados-360x266.jpg" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li>
+                                <i class="fa fa-calendar-o"></i> Desde Abril, 2019
+                            </li>
+                            <li>
+                                <i class="fa fa-comment-o"></i> 10
+                            </li>
+                        </ul>
+                        <div class="shoping__cart__btns">
+                            <a href="#" class="primary-btn">R$ 56,70</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="/midia/img/hiper-extra-360x266.jpg" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li>
+                                <i class="fa fa-calendar-o"></i> Desde Fevereiro, 2020
+                            </li>
+                            <li>
+                                <i class="fa fa-comment-o"></i> 4
+                            </li>
+                        </ul>
+                        <div class="shoping__cart__btns">
+                            <a href="#" class="primary-btn">R$ 74,10</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="blog__item">
+                    <div class="blog__item__pic">
+                        <img src="/midia/img/pao_logo-360x266.jpg" alt="">
+                    </div>
+                    <div class="blog__item__text">
+                        <ul>
+                            <li>
+                                <i class="fa fa-calendar-o"></i> Desde Maio, 2019
+                            </li>
+                            <li>
+                                <i class="fa fa-comment-o"></i>7
+                            </li>
+                        </ul>
+                        <div class="shoping__cart__btns">
+                            <a href="#" class="primary-btn">R$ 81,03</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shoping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shoping__cart__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="shoping__product">Produtos</th>
+                                <th>Pre&ccedil;o</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="shoping__cart__item">
+                                    <img src="/midia/products/2021/07/21/bassi_tibone270-270.jpg" alt="">
+                                    <h5>Carne Bovina Tibone BASSI Com Osso Congelada 600g</h5>
+                                </td>
+                                <td class="shoping__cart__price">
+                                    R$33,90
+                                </td>
+                                <td class="shoping__cart__quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="shoping__cart__total">
+                                    R$33,90
+                                </td>
+                                <td class="shoping__cart__item__close">
+                                    <span class="icon_close"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="shoping__cart__item">
+                                    <img src="/midia/products/2021/07/21/600189-270x270.jpg" alt="">
+                                    <h5>Hamb&uacute;rguer Misto De Carne Bovina E Frango 672g</h5>
+                                </td>
+                                <td class="shoping__cart__price">
+                                    R$12,90
+                                </td>
+                                <td class="shoping__cart__quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="shoping__cart__total">
+                                    $12,90
+                                </td>
+                                <td class="shoping__cart__item__close">
+                                    <span class="icon_close"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="shoping__cart__item">
+                                    <img src="/midia/products/2021/07/21/81P4zScRc9S._AC_SY606_1.jpg" alt="">
+                                    <h5>Fusilli Quinoa Tivva Sem Gl&uacute;tem 500g</h5>
+                                </td>
+                                <td class="shoping__cart__price">
+                                    R$9,90
+                                </td>
+                                <td class="shoping__cart__quantity">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="shoping__cart__total">
+                                    R$9,90
+                                </td>
+                                <td class="shoping__cart__item__close">
+                                    <span class="icon_close"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shoping__cart__btns">
+                    <a href="#" class="primary-btn cart-btn">Continuar Comprando</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="shoping__continue">
+                    <div class="shoping__discount">
+                        <h5>Cupom de desconto</h5>
+                        <form action="#">
+                            <input type="text" placeholder="Insira seu cupom">
+                            <button type="submit" class="site-btn">Aplicar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="shoping__checkout">
+                    <h5>Pagamento da Compra</h5>
+                    <ul>
+                        <li>Subtotal <span>R$56,70</span></li>
+                        <li>Total <span>R$56,70</span></li>
+                    </ul>
+                    <a href="{% url 'product:checkout' %} " class="primary-btn">Finalizar Compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

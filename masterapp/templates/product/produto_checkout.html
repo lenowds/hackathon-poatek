@@ -1,0 +1,139 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+    Finalizar Compras
+{% endblock title %}
+
+{% block content %}
+<section class="breadcrumb-section set-bg" data-setbg="/midia/img/sitesconf.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Checkout</h2>
+                    <div class="breadcrumb__option">
+                        <span>Nunca foi t&atilde;o divertido fazer compras de supermercado </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="checkout spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h6>
+                    <span class="icon_tag_alt"></span>Estamos quase finalizando...
+                </h6>
+            </div>
+        </div>
+        <div class="checkout__form">
+            <h4>Detalhes da Sua Compra</h4>
+            <form action="#">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Primeiro nome<span>*</span></p>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>&Uacute;ltimo nome<span>*</span></p>
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Regi&atilde;o<span>*</span></p>
+                            <input type="text" />
+                        </div>
+                        <div class="checkout__input">
+                            <p>
+                                Endere&ccedil;o<span>*</span>
+                            </p>
+                            <input type="text" class="checkout__input__add" />
+                            <input type="text" />
+                        </div>
+                        <div class="checkout__input">
+                            <p>
+                                Cidade<span>*</span>
+                            </p>
+                            <input type="text" />
+                        </div>
+                        <div class="checkout__input">
+                            <p>
+                                Estado<span>*</span>
+                            </p>
+                            <input type="text" />
+                        </div>
+                        <div class="checkout__input">
+                            <p>
+                                CEP<span>*</span>
+                            </p>
+                            <input type="text" />
+                        </div>
+                        <div class="checkout__input__checkbox">
+                            <label for="diff-acc">
+                                Deseja receber em outro endere&ccedil;o
+                                <input type="checkbox" id="diff-acc" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="checkout__input">
+                            <p>
+                                Incluir observa&ccedil;&atilde;o<span>*</span>
+                            </p>
+                            <input type="text" placeholder="Incluir observa&ccedil;&atilde;o sobre a entrega da sua compra">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="checkout__order">
+                            <h4>Pedido</h4>
+                            <div class="checkout__order__products">
+                                Produtos <span>Total</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    Carne Bovina Tibone BASSI Com Osso Congelada 600g <span>R$33,90</span>
+                                </li>
+                                <li>
+                                    Hamb&uacute;rguer Misto De Carne Bovina E Frango 672g <span>R$12,90</span>
+                                </li>
+                                <li>
+                                    Fusilli Quinoa Tivva Sem Gl&uacute;tem 500g <span>R$9,90</span>
+                                </li>
+                            </ul>
+                            <div class="checkout__order__subtotal">
+                                Subtotal <span>R$56,70</span>
+                            </div>
+                            <div class="checkout__order__total">
+                                Total <span>R$56,70</span>
+                            </div>
+                            <div class="checkout__input__checkbox">
+                                <label for="aguard">
+                                    Guardar essa lista para próxima compra
+                                    <input type="checkbox" id="aguard" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="checkout__input__checkbox">
+                                <label for="alert">
+                                    Alertar promo&ccedil;&otilde;es sobre os produtos da minha lista
+                                    <input type="checkbox" id="alert">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="site-btn">Finalizar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}

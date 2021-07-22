@@ -1,0 +1,29 @@
+{% extends 'master.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Entrar{% endblock %}
+
+{% block content %}
+<div class="container-fluid h-100 text-dark">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-lg-4 bg-light rounded">
+            <div class="row justify-content-center align-items-center">
+                <p class="h3 mb-3 fw-normal" >Minha Conta</p>
+            </div>
+            <form method="post">
+                <div class="form-group">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Continuar</button>
+                </div>
+            </form>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'account_signup' %}">Criar uma conta!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

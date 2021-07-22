@@ -1,0 +1,495 @@
+{% extends 'master.html' %}
+
+{% load static %}
+
+{% block title %}
+    eMarket
+{% endblock title %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Todas categorias</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/product/des_categoria/massas/" class="">
+                                Biscoitos, salgadinhos e snacks
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/gaos/" class="">
+                                Básico da despensa
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/carnes-e-aves/" class="">
+                                Carnes e aves
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/congelados/" class="">
+                                Congelados
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/doces-e-sobremesas/" class="">
+                                Doces e sobremesas
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/enlatados-e-conservas/" class="">
+                                Enlatados e conservas
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/frios/" class="">
+                                Frios
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/frutas-legumes-e-verduras/" class="">
+                                Frutas, legumes e verduras
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/padaria-e-confeitaria/" class="">
+                                Padaria e confeitaria
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/peixaria/" class="">
+                                Peixaria
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/queijos-e-laticinios/" class="">
+                                Queijos e laticínios
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="/product/des_categoria/sementes-e-oleaginosas/" class="">
+                                Sementes e oleaginosas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <div class="hero__search__form">
+                        <form action="#">
+                            <div class="hero__search__categories">
+                                Todas categorias
+                                <span class="arrow_carrot-down"></span>
+                                <span class="arrow_carrot-down"></span>
+                            </div>
+                            <input type="text" placeholder="O que voc&ecirc; procura?">
+                            <button type="submit" class="site-btn">BUSCAR</button>
+                        </form>
+                    </div>
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>0800 888 8888</h5>
+                            <span>Servi&ccedil;o de atendimento ao cliente</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="hero__item set-bg" data-setbg="midia/img/Banner_Left_500off-730x350-1.jpg"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="midia/products/2021/07/21/61AMOrddR2L._AC_SX679_2.jpg">
+                        <h5><a href="#">Lamen</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="midia/products/2021/07/21/61BN7iMg4L._AC_SX425_1.jpg">
+                        <h5><a href="#">Feij&atilde;o</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="midia/products/2021/07/21/115172021.jpg">
+                        <h5><a href="#">Biscoitos</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="midia/products/2021/07/21/51j8SWa5vS._AC_SX425_321.jpg">
+                        <h5><a href="#">Massas</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="categories__item set-bg" data-setbg="midia/products/2021/07/21/61V-TAF9vLL._AC_SX425_23.jpg">
+                        <h5><a href="#">Gr&atilde;os</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Produtos</h2>
+                </div>
+                <div class="featured__controls">
+                    <ul>
+                        <li class="active" data-filter="*">Todos</li>
+                        <li data-filter=".cesta">Cesta b&aacute;sica</li>
+                        <li data-filter=".carne">Carnes</li>
+                        <li data-filter=".congelado">Congelados</li>
+                        <li data-filter=".frios">Frios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix cesta">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/61eMZZmcKL._AC_SY445_1.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Feijão Preto Tipo 1 Namorado 1kg</a></h6>
+                        <h5>R$4,99</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix frios">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/11964576-200x200.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Peito De Peru Defumado Light 150g</a></h6>
+                        <h5>R$5,80</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix carne">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/11880473270x270.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Maminha Swift Ouro 1,4kg</a></h6>
+                        <h5>R$45,89</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix cesta">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/71zmH4Sf6S._AC_SX425_1.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Macarrão Grano Duro Casarecce Barilla 500g</a></h6>
+                        <h5>R$15,02</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix carne">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/11879511270x270.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Tiras de Alcatra Congelado SWIFT 500G</a></h6>
+                        <h5>R$28,50</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix cesta">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/81P4zScRc9S._AC_SY606_1.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Fusilli Quinoa Tivva Sem Gl&uacute;tem 500g</a></h6>
+                        <h5>$9,90</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix carne">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/bassi_tibone270-270.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Carne Bovina Tibone BASSI Com Osso Congelada 600g</a></h6>
+                        <h5>R$33,90</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix congelado">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="midia/products/2021/07/21/600189-200x200.jpg">
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Hambúrguer Misto De Carne Bovina E Frango 672g</a></h6>
+                        <h5>R$12,90</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="banner__pic">
+                    <a href="#">
+                        <img src="midia/img/165938861.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="banner__pic">
+                    <a href="#">
+                        <img src="midia/img/167963881.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="latest-product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Queridinhos</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/600189-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Hambúrguer Misto De Carne Bovina E Frango 672g</h6>
+                                    <span>R$12,90</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/12856983-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Hamb&uacute;rguer Misto De Carne Bovina E Frango 672g</h6>
+                                    <span>R$15,90</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/61AMOrddR2L-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Lamen Suave Vit Sabor Tomate Nissin 85gr</h6>
+                                    <span>R$0,99</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/12940175_110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Biscoito de Arroz Mini Sem Gl&aacute;ten 80g</h6>
+                                    <span>R$5,10</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/115172021-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Cookie Aruba Protein Baunilha 40g</h6>
+                                    <span>R$2,30</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/11964576-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Peito De Peru Defumado Light 150g</h6>
+                                    <span>R$5,80</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Menores Pre&ccedil;os</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/61AMOrddR2L-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Lamen Suave Vit Sabor Tomate Nissin 85gr</h6>
+                                    <span>R$0,99</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/115172021-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Cookie Aruba Protein Baunilha 40g</h6>
+                                    <span>R$2,30</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/12940175_110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Biscoito de Arroz Mini Sem Gl&aacute;ten 80g</h6>
+                                    <span>R$5,10</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="latest-product__text">
+                    <h4>Recomendados</h4>
+                    <div class="latest-product__slider owl-carousel">
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/600189-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Hambúrguer Misto De Carne Bovina E Frango 672g</h6>
+                                    <span>R$12,90</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/12856983-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Hamb&uacute;rguer Misto De Carne Bovina E Frango 672g</h6>
+                                    <span>R$5,90</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/11964576-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Peito De Peru Defumado Light 150g</h6>
+                                    <span>R$5,80</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="latest-prdouct__slider__item">
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/61AMOrddR2L-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Lamen Suave Vit Sabor Tomate Nissin 85gr</h6>
+                                    <span>R$0,99</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/115172021-110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Cookie Aruba Protein Baunilha 40g</h6>
+                                    <span>R$2,30</span>
+                                </div>
+                            </a>
+                            <a href="#" class="latest-product__item">
+                                <div class="latest-product__item__pic">
+                                    <img src="midia/latest/12940175_110x110.jpg" alt="">
+                                </div>
+                                <div class="latest-product__item__text">
+                                    <h6>Biscoito de Arroz Mini Sem Gl&aacute;ten 80g</h6>
+                                    <span>R$5,10</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
